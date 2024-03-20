@@ -1,0 +1,14 @@
+com\mihkel\kodutoo\controller\ElevatorController.class
+com\mihkel\kodutoo\model\Direction.class
+com\mihkel\kodutoo\service\ElevatorServiceImpl.class
+com\mihkel\kodutoo\model\ElevatorRequestWrapper.class
+com\mihkel\kodutoo\KodutooApplication.class
+com\mihkel\kodutoo\model\Elevator.class
+com\mihkel\kodutoo\service\ElevatorService.class
+com\mihkel\kodutoo\model\Floor.class
+com\mihkel\kodutoo\config\WebSocketConfig.class
+com\mihkel\kodutoo\controller\FloorController.class
+com\mihkel\kodutoo\controller\WebSocketController.class
+com\mihkel\kodutoo\model\ElevatorRequest.class
+com\mihkel\kodutoo\service\MessageService.class
+com\mihkel\kodutoo\config\RedisConfig.class
