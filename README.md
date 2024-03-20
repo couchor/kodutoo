@@ -6,4 +6,4 @@ Seejärel sisenege terminalis loodud "kodutoo" kausta.
 
 Jooksutage käsklus "docker compose up -d"
 
-Külastage veebilehte [localhost:4200](http://localhost:4200/)http://localhost:4200/
+Külastage veebilehte [localhost:4200](http://localhost:4200/)
