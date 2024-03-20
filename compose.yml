@@ -1,0 +1,18 @@
+services:
+  backend:
+    container_name: backend-container
+    build: ./backend
+    ports:
+      - "8085:8085"
+    links:
+      - redis
+  redis:
+    image: redis
+    ports:
+      - "6379:6379"
+  frontend:
+    container_name: frontend-container
+    build: ./frontend
+    image: frontend-image:v1
+    ports:
+      - "4200:4200"

@@ -1,0 +1,10 @@
+<div class="flex">
+  <div class="elevator__display">
+    <div>{{ elevator.currentFloor }}</div>
+    <div *ngIf="elevator.direction.toString() === 'UP'">&uarr;</div>
+    <div *ngIf="elevator.direction.toString() === 'DOWN'">&darr;</div>
+  </div>
+  <div class="time__to__floor" [ngClass]="getTimeToFloor(elevator, floorNumber) > 0 ? 'active__text' : ''" style="text-align: center;">
+    {{ getTimeToFloor(elevator, floorNumber) }}s
+  </div>
+</div>

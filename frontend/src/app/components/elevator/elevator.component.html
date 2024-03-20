@@ -1,0 +1,11 @@
+<div class="flex-col gap-05">
+  <app-elevator-display [elevator]="elevator" [floorNumber]="floorNumber"></app-elevator-display>
+  <div style="position: relative;">
+    <!-- Add 9 buttons with numbers -->
+    <div class="open__elevator">
+      <button *ngFor="let tempFloor of floors;" (click)="sendInternalRequest(tempFloor.floorNumber, Direction.UP)" class="elevator__button" [ngClass]="hasActiveCall(tempFloor.floorNumber, Direction.UP) ? 'active' : '' ">{{ tempFloor.floorNumber }}</button>
+    </div>
+    <!-- Absolute div to cover buttons if door is closed and current floor is not the floor number. Animate closing in 1 second -->
+    <div class="closed__elevator" [ngClass]="!elevator.doorOpen || elevator.currentFloor !== floorNumber ? 'closing' : ''" [ngStyle]="{ '--cover-width': elevator.doorOpen && elevator.currentFloor === floorNumber ? '0%' : '100%' }" ></div>
+  </div>
+</div>

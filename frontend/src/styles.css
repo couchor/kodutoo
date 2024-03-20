@@ -1,0 +1,81 @@
+.flex {
+  display: flex;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.gap-05 {
+  gap: 0.5rem;
+}
+
+.gap-1 {
+  gap: 1rem;
+}
+
+.gap-2 {
+  gap: 2rem;
+}
+
+.elevator__button {
+  background-color: #f0f0f0;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  padding: 0.5rem;
+  text-align: center;
+  width: 100%;
+}
+
+.active {
+  border-color: red;
+}
+
+.time__to__floor {
+  background-color: #423e3e;
+  padding: 0.5rem;
+  border-radius: 5px;
+  color: #423e3e;
+  margin-inline: auto;
+  width: 25px;
+}
+
+.active__text {
+  color: red;
+}
+
+.elevator__display {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem;
+  background: #000;
+  border-radius: 5px;
+  padding: 0.5rem;
+  color: red;
+  width: 25px;
+  margin-inline: auto;
+}
+
+.open__elevator {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 0.3rem;
+  padding: 5px;
+  border: 1px solid gray;
+}
+
+.closed__elevator {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: var(--cover-width);
+  height: 100%;
+  background-color: gray;
+  transition: width 0s ease-in-out;
+}
+
+.closed__elevator.closing {
+  transition-duration: 1s; /* Transition duration set to 1 second for expanding */
+}

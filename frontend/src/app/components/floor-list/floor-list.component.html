@@ -1,0 +1,27 @@
+<div class="flex-col gap-1">
+  <div *ngFor="let tempFloor of floors; index as i">
+    <div style="margin-bottom: 1rem; text-align: center; font-size: 1.5rem;">{{ tempFloor.floorNumber }}. Korrus</div>
+    <div class="flex gap-05" style="justify-content: center;">
+      <app-elevator [floors]="floors" [elevator]="elevator1" [floorNumber]="tempFloor.floorNumber"></app-elevator>
+     
+      <div style="display: flex; align-items: center;">
+        <div class="flex-col gap-05">
+          <div class="flex gap-05">
+            
+            
+          </div>
+          
+          <div class="flex gap-05">
+            <button *ngIf="i !== 0" (click)="sendRequest(tempFloor.floorNumber, Direction.UP, true)" class="elevator__button"  [ngClass]="hasActiveCall(tempFloor.floorNumber, Direction.UP) ? 'active' : '' ">&uarr;</button>
+            <button *ngIf="i !== floors.length - 1" (click)="sendRequest(tempFloor.floorNumber, Direction.DOWN, true)" class="elevator__button"  [ngClass]="hasActiveCall(tempFloor.floorNumber, Direction.DOWN) ? 'active' : '' ">&darr;</button>
+          </div>
+          
+          
+          
+        </div>
+      </div>
+      <app-elevator [floors]="floors" [elevator]="elevator2" [floorNumber]="tempFloor.floorNumber"></app-elevator>
+    </div>
+    <hr>
+  </div>
+</div>
